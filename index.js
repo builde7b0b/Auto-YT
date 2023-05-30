@@ -14,3 +14,8 @@ async function authenticate() {
 }
 
 authenticate();
+
+
+async function uploadVideo() {
+    
+}
