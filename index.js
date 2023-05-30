@@ -6,9 +6,11 @@ const { auth } = require('google-auth-library');
 async function authenticate() {
 
     const client = await auth.getClient({
-        keyFile: 'path/to/client_secret.json',
+        keyFile: 'client_secret_830154272096-jaqvtthci8tqnrpirggg223h49af5rnm.apps.googleusercontent.com.json',
         scopes: 'https://www.googleapis.com/auth/youtube.upload',
     });
 
     google.options({ auth: client })
 }
+
+authenticate();
