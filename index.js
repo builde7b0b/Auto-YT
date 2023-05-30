@@ -1,6 +1,7 @@
 
 const { google } = require('googleapis');
 const { auth } = require('google-auth-library');
+const fs = require('fs');
 
 
 async function authenticate() {
@@ -17,5 +18,25 @@ authenticate();
 
 
 async function uploadVideo() {
-    
+    const youtube = google.youtube('v3');
+
+    const videoParams = {
+        part: 'snippet',
+        requestBody: {
+            snippet: {
+                title: 'title',
+                description: 'description',
+                tags: ['tag1', 'tag2'],
+            },
+        },
+        media: {
+            body: fs.createReadStream('./Vid.mp4'),
+        },
+    };
+
+    const response = await youtube.videos.insert(videoParams);
+    console.log('Video uploaded:', response.data);
+
 }
+
+uploadVideo(); 
