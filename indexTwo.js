@@ -5,6 +5,7 @@ const { OAuth2Client } = require('google-auth-library');
 
 const CLIENT_ID = "830154272096-jaqvtthci8tqnrpirggg223h49af5rnm.apps.googleusercontent.com";
 const CLIENT_SECRET = "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";
+
 const REDIRECT_URL = "http://localhost";
 
 const oauth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
