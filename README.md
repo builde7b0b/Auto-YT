@@ -11,8 +11,8 @@ Coverage:
 
 
 Pre-requisites:
-`npm install --save-dev jest supertest`
+`$ npm install --save-dev jest supertest`
 
 Check package.json for correct line in scripts
 Run Test: server.test.js 
-
+`$ npm test`
